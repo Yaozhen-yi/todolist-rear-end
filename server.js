@@ -47,8 +47,9 @@ const pool = new pg.Pool({
     database: process.env.DB_NAME,
     password: process.env.DB_PASSWORD,
     port: process.env.DB_PORT,
+    connectionString: process.env.DATABASE_URL,
     ssl: {
-      rejectUnauthorized: false // 根据需要启用或禁用 SSL
+      rejectUnauthorized: true // 根据需要启用或禁用 SSL
     }
   });
 
